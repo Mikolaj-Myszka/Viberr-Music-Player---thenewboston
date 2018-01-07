@@ -1,6 +1,6 @@
-Technologies: Python 3.6, Django 1.11 + HTML, CSS, Bootstrap, JavaScript
-Tutorial Source: https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
-Description Source: https://github.com/buckyroberts/Viberr
+Technologies: Python 3.6, Django 1.11 + HTML, CSS, Bootstrap, JavaScript <br />
+Tutorial Source: https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK <br />
+Description Source: https://github.com/buckyroberts/Viberr <br />
 
 
 ![](http://i.imgur.com/YiFZyuW.png)
