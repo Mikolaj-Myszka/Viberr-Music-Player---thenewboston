@@ -1,0 +1,41 @@
+{% extends 'music/base.html' %}
+
+{% block title %}Album Details{% endblock %}
+
+{% block body %}
+    <img src="{{ album.album_logo }}">
+
+    <h1>{{ album.album_title }}</h1>
+    <h2>{{ album.artist }}</h2>
+
+
+    <ul>
+        {% for song in album.song_set.all %}
+            <li>{{ song.song_title }} - {{ song.file_type }}</li>
+        {% endfor %}
+    </ul>
+
+
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif%}
+
+
+    <form action="{# {% url 'music:favourite' album.id %} #}" method="post">
+        {% csrf_token %}
+        {% for song in album.song_set.all %}
+            <input type="radio" name="song" id="song{{ forloop.counter }}" value="{{ song.id }}">
+            <label for="song{{ forloop.counter }}">
+                {{ song.song_title }}
+                {% if song.is_favourite %}
+                    <img src="https://www.sharkbrew.com/img/aedcdf27df0683997f813fad73af2e0b.png" />
+                {% endif %}
+            </label><br/>
+        {% endfor %}
+        <input type="submit" value="Favourite">
+    </form>
+
+{% endblock %}
+
+
+
